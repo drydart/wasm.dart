@@ -1,0 +1,6 @@
+WebAssembly VM for Dart
+=======================
+
+See <https://github.com/drydart/wasm.dart> for documentation.
+
+Use <https://github.com/drydart/wasm.dart/issues> for bug reports.
