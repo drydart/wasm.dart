@@ -11,5 +11,5 @@ class Machine {
   /// The machine's global state.
   final Store store;
 
-  const Machine({this.stack = const Stack(), this.store = const Store()});
+  const Machine({this.stack = const Stack(), this.store = const Store.empty()});
 }

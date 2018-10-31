@@ -7,7 +7,7 @@ void main() {
   Store store;
 
   setUp(() {
-    store = Store();
+    store = Store.allocate();
   });
 
   tearDown(() {
@@ -22,7 +22,9 @@ void main() {
     });
 
     test(".isValid() returns true for valid function addresses", () {
-      //expect(FunctionAddress(store, 0).isValid, isTrue); // TODO
+      final FunctionAddress addr = store.allocateFunction();
+      expect(addr.index, isZero);
+      expect(FunctionAddress(store, 0).isValid, isTrue);
     });
 
     test(".isValid() returns false for invalid function addresses", () {
@@ -38,7 +40,9 @@ void main() {
     });
 
     test(".isValid() returns true for valid table addresses", () {
-      //expect(TableAddress(store, 0).isValid, isTrue); // TODO
+      final TableAddress addr = store.allocateTable();
+      expect(addr.index, isZero);
+      expect(TableAddress(store, 0).isValid, isTrue);
     });
 
     test(".isValid() returns false for invalid table addresses", () {
@@ -54,7 +58,9 @@ void main() {
     });
 
     test(".isValid() returns true for valid memory addresses", () {
-      //expect(MemoryAddress(store, 0).isValid, isTrue); // TODO
+      final MemoryAddress addr = store.allocateMemory();
+      expect(addr.index, isZero);
+      expect(MemoryAddress(store, 0).isValid, isTrue);
     });
 
     test(".isValid() returns false for invalid memory addresses", () {
@@ -70,7 +76,9 @@ void main() {
     });
 
     test(".isValid() returns true for valid global addresses", () {
-      //expect(GlobalAddress(store, 0).isValid, isTrue); // TODO
+      final GlobalAddress addr = store.allocateGlobal();
+      expect(addr.index, isZero);
+      expect(GlobalAddress(store, 0).isValid, isTrue);
     });
 
     test(".isValid() returns false for invalid global addresses", () {

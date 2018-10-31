@@ -15,11 +15,15 @@ class Store {
   final List<Global> globals;
 
   const Store({
-    this.funcs   = const <Function>[],
-    this.tables  = const <Table>[],
-    this.mems    = const <Memory>[],
-    this.globals = const <Global>[],
-  });
+    this.funcs,
+    this.tables,
+    this.mems,
+    this.globals,
+  })
+    : assert(funcs != null),
+      assert(tables != null),
+      assert(mems != null),
+      assert(globals != null);
 
   /// The canonical empty store.
   const Store.empty()
@@ -27,6 +31,13 @@ class Store {
       tables  = const <Table>[],
       mems    = const <Memory>[],
       globals = const <Global>[];
+
+  /// The canonical empty store.
+  Store.allocate()
+    : funcs   = <Function>[],
+      tables  = <Table>[],
+      mems    = <Memory>[],
+      globals = <Global>[];
 
   /// Returns true if this store is empty.
   bool get isEmpty => funcs.isEmpty && tables.isEmpty && mems.isEmpty && globals.isEmpty;

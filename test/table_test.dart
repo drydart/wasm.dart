@@ -7,7 +7,7 @@ void main() {
   Store store;
 
   setUp(() {
-    store = Store();
+    store = Store.allocate();
   });
 
   tearDown(() {

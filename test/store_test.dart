@@ -7,7 +7,7 @@ void main() {
   Store store;
 
   setUp(() {
-    store = Store.empty();
+    store = Store.allocate();
   });
 
   tearDown(() {
@@ -16,7 +16,6 @@ void main() {
 
   group("Store", () {
     test("can be constructed", () {
-      final Store store = Store();
       expect(store.funcs, isEmpty);
       expect(store.tables, isEmpty);
       expect(store.mems, isEmpty);
@@ -25,7 +24,7 @@ void main() {
     });
 
     test(".isValid() returns true for valid stores", () {
-      // TODO
+      expect(Store.empty().isValid, isTrue);
     });
 
     test(".isValid() returns false for invalid stores", () {
