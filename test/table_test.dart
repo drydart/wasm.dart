@@ -13,4 +13,12 @@ void main() {
   tearDown(() {
     store = null;
   });
+
+  group("Table", () {
+    test("can be constructed", () {
+      final Table table = Table(elem: [], max: 0);
+      expect(table.elem, equals([]));
+      expect(table.max, equals(0));
+    });
+  });
 }

@@ -15,6 +15,11 @@ void main() {
   });
 
   group("FunctionAddress", () {
+    test("can be constructed", () {
+      final FunctionAddress addr = FunctionAddress(store, 0);
+      expect(addr.store, equals(store));
+      expect(addr.index, equals(0));
+    });
     test(".isValid() returns true for valid function addresses", () {
       //expect(FunctionAddress(store, 0).isValid, equals(true)); // TODO
     });
@@ -24,6 +29,11 @@ void main() {
   });
 
   group("TableAddress", () {
+    test("can be constructed", () {
+      final TableAddress addr = TableAddress(store, 0);
+      expect(addr.store, equals(store));
+      expect(addr.index, equals(0));
+    });
     test(".isValid() returns true for valid table addresses", () {
       //expect(TableAddress(store, 0).isValid, equals(true)); // TODO
     });
@@ -33,6 +43,11 @@ void main() {
   });
 
   group("MemoryAddress", () {
+    test("can be constructed", () {
+      final MemoryAddress addr = MemoryAddress(store, 0);
+      expect(addr.store, equals(store));
+      expect(addr.index, equals(0));
+    });
     test(".isValid() returns true for valid memory addresses", () {
       //expect(MemoryAddress(store, 0).isValid, equals(true)); // TODO
     });
@@ -42,6 +57,11 @@ void main() {
   });
 
   group("GlobalAddress", () {
+    test("can be constructed", () {
+      final GlobalAddress addr = GlobalAddress(store, 0);
+      expect(addr.store, equals(store));
+      expect(addr.index, equals(0));
+    });
     test(".isValid() returns true for valid global addresses", () {
       //expect(GlobalAddress(store, 0).isValid, equals(true)); // TODO
     });
