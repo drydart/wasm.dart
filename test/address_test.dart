@@ -18,13 +18,15 @@ void main() {
     test("can be constructed", () {
       final FunctionAddress addr = FunctionAddress(store, 0);
       expect(addr.store, equals(store));
-      expect(addr.index, equals(0));
+      expect(addr.index, isZero);
     });
+
     test(".isValid() returns true for valid function addresses", () {
-      //expect(FunctionAddress(store, 0).isValid, equals(true)); // TODO
+      //expect(FunctionAddress(store, 0).isValid, isTrue); // TODO
     });
+
     test(".isValid() returns false for invalid function addresses", () {
-      expect(FunctionAddress(store, 0).isValid, equals(false));
+      expect(FunctionAddress(store, 0).isValid, isFalse);
     });
   });
 
@@ -32,13 +34,15 @@ void main() {
     test("can be constructed", () {
       final TableAddress addr = TableAddress(store, 0);
       expect(addr.store, equals(store));
-      expect(addr.index, equals(0));
+      expect(addr.index, isZero);
     });
+
     test(".isValid() returns true for valid table addresses", () {
-      //expect(TableAddress(store, 0).isValid, equals(true)); // TODO
+      //expect(TableAddress(store, 0).isValid, isTrue); // TODO
     });
+
     test(".isValid() returns false for invalid table addresses", () {
-      expect(TableAddress(store, 0).isValid, equals(false));
+      expect(TableAddress(store, 0).isValid, isFalse);
     });
   });
 
@@ -46,13 +50,15 @@ void main() {
     test("can be constructed", () {
       final MemoryAddress addr = MemoryAddress(store, 0);
       expect(addr.store, equals(store));
-      expect(addr.index, equals(0));
+      expect(addr.index, isZero);
     });
+
     test(".isValid() returns true for valid memory addresses", () {
-      //expect(MemoryAddress(store, 0).isValid, equals(true)); // TODO
+      //expect(MemoryAddress(store, 0).isValid, isTrue); // TODO
     });
+
     test(".isValid() returns false for invalid memory addresses", () {
-      expect(MemoryAddress(store, 0).isValid, equals(false));
+      expect(MemoryAddress(store, 0).isValid, isFalse);
     });
   });
 
@@ -60,13 +66,15 @@ void main() {
     test("can be constructed", () {
       final GlobalAddress addr = GlobalAddress(store, 0);
       expect(addr.store, equals(store));
-      expect(addr.index, equals(0));
+      expect(addr.index, isZero);
     });
+
     test(".isValid() returns true for valid global addresses", () {
-      //expect(GlobalAddress(store, 0).isValid, equals(true)); // TODO
+      //expect(GlobalAddress(store, 0).isValid, isTrue); // TODO
     });
+
     test(".isValid() returns false for invalid global addresses", () {
-      expect(GlobalAddress(store, 0).isValid, equals(false));
+      expect(GlobalAddress(store, 0).isValid, isFalse);
     });
   });
 }

@@ -16,4 +16,8 @@ class Table {
 
   /// The canonical empty table.
   const Table.empty() : elem = const <FunctionAddress>[], max = 0;
+
+  /// The canonical empty table.
+  Table.allocate(final List<FunctionAddress> elem)
+    : elem = elem, max = 0 {}
 }
