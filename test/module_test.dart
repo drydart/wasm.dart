@@ -4,5 +4,13 @@ import 'package:test/test.dart';
 import 'package:wasm/wasm.dart';
 
 void main() {
-  // TODO
+  Store store;
+
+  setUp(() {
+    store = Store();
+  });
+
+  tearDown(() {
+    store = null;
+  });
 }
