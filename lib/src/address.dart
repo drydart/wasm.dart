@@ -14,7 +14,7 @@ abstract class Address {
   /// The index into the respective store component.
   final int index;
 
-  Address(this.store, this.index)
+  const Address(this.store, this.index)
     : assert(store != null),
       assert(index >= 0);
 
@@ -27,17 +27,18 @@ abstract class Address {
 
 /// Function address of a function instance in a store.
 class FunctionAddress extends Address {
-  FunctionAddress(final Store store, final int index) : super(store, index);
+  const FunctionAddress(final Store store, final int index) : super(store, index);
 
   @override
   bool get isValid => index >= 0 && index < store.funcs.length;
 
+  @override
   Function dereference() => store.funcs[index];
 }
 
 /// Table address of a table instance in a store.
 class TableAddress extends Address {
-  TableAddress(final Store store, final int index) : super(store, index);
+  const TableAddress(final Store store, final int index) : super(store, index);
 
   @override
   bool get isValid => index >= 0 && index < store.tables.length;
@@ -48,7 +49,7 @@ class TableAddress extends Address {
 
 /// Memory address of a memory instance in a store.
 class MemoryAddress extends Address {
-  MemoryAddress(final Store store, final int index) : super(store, index);
+  const MemoryAddress(final Store store, final int index) : super(store, index);
 
   @override
   bool get isValid => index >= 0 && index < store.mems.length;
@@ -59,7 +60,7 @@ class MemoryAddress extends Address {
 
 /// Global address of a global instance in a store.
 class GlobalAddress extends Address {
-  GlobalAddress(final Store store, final int index) : super(store, index);
+  const GlobalAddress(final Store store, final int index) : super(store, index);
 
   @override
   bool get isValid => index >= 0 && index < store.globals.length;
