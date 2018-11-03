@@ -5,9 +5,11 @@ library wasm;
 
 import 'dart:typed_data' show ByteBuffer;
 
+import 'src/address.dart';
 import 'src/module.dart' show Module;
 import 'src/store.dart' show Store;
 
+export 'src/address.dart';
 export 'src/function.dart' show Function;
 export 'src/global.dart' show Global;
 export 'src/machine.dart' show Machine;
@@ -40,4 +42,9 @@ bool validateModule(final Module module) {
 /// TODO
 Store instantiateModule(final Store store, final Module module) {
   return store; // TODO
+}
+
+/// TODO
+MemoryAddress allocMem(final Store store) {
+  return store.allocateMemory();
 }
