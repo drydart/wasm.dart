@@ -1,6 +1,6 @@
 # See: https://www.dartlang.org/tools/pub/pubspec
 name: wasm
-version: 0.0.2
+version: 0.0.3
 description: >-
   WebAssembly VM for Dart
 author: Arto Bendiken <arto@bendiken.net>
