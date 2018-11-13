@@ -15,6 +15,7 @@ export 'src/global.dart' show Global;
 export 'src/machine.dart' show Machine;
 export 'src/memory.dart' show Memory;
 export 'src/module.dart' show Module;
+export 'src/opcode.dart' show Opcode;
 export 'src/stack.dart' show Stack;
 export 'src/store.dart' show Store;
 export 'src/table.dart' show Table;
