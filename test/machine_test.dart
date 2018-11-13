@@ -13,4 +13,20 @@ void main() {
   tearDown(() {
     store = null;
   });
+
+  group("Machine", () {
+    test("can be constructed", () {
+      final Machine vm = Machine();
+    });
+
+    test(".step([Opcode.UNREACHABLE]) causes an unconditional trap", () {
+      final Machine vm = Machine();
+      // TODO
+    });
+
+    test(".step([Opcode.NOP]) does nothing", () {
+      final Machine vm = Machine();
+      // TODO
+    });
+  });
 }
